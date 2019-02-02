@@ -40,10 +40,24 @@ defmodule Deribit.DeribitApi do
   end
 
   def subscribe_callback({:notifications, response}) do
-    IO.puts "notifications received"
+    IO.write "."
+    response |> Enum.each(&notification_response/1)
   end
 
   def subscribe_callback({response_type, response}) do
     IO.puts "Unknown response_type: #{response_type}"
+  end
+
+  defp notification_response(%{"message" => message} = notification) do
+    known_types = [
+      "order_book_event",
+      "portfolio_event",
+      "trade_event"
+    ]
+
+    if !Enum.any?(known_types, fn t -> t == message end) do
+      IO.inspect notification
+      IO.puts "===================="
+    end
   end
 end
