@@ -10,6 +10,7 @@ defmodule DataWarehouse.Application do
     children = [
       # Starts a worker by calling: DataWarehouse.Worker.start_link(arg)
       # {DataWarehouse.Worker, arg},
+      DataWarehouse.Repo
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
