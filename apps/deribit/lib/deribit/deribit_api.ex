@@ -1,7 +1,5 @@
-defmodule DeribitApi do
-
+defmodule Deribit.DeribitApi do
   alias __MODULE__
-  alias Deribit.WebSocket
 
   defstruct [:connection]
 
