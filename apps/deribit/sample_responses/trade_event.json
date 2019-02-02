@@ -1,0 +1,24 @@
+%{
+  "message" => "trade_event",
+  "result" => [
+    %{
+      "amount" => 30.0,
+      "direction" => "sell",
+      "indexPrice" => 3420.41,
+      "instrument" => "BTC-28JUN19",
+      "label" => "",
+      "matchingId" => 0,
+      "me" => "",
+      "orderId" => 0,
+      "price" => 3336.0,
+      "quantity" => 3,
+      "state" => "closed",
+      "tickDirection" => 3,
+      "timeStamp" => 1549096674321,
+      "tradeId" => 14979915,
+      "tradeSeq" => 415027
+    }
+  ],
+  "success" => true,
+  "testnet" => false
+}

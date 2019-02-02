@@ -1,0 +1,80 @@
+[
+  %{
+    "message" => "order_book_event",
+    "result" => %{
+      "askIv" => 70.45,
+      "asks" => [
+        %{
+          "amount" => 10.0,
+          "cm" => 10.0,
+          "cm_amount" => 10.0,
+          "price" => 0.043,
+          "quantity" => 10.0
+        },
+        %{
+          "amount" => 8.0,
+          "cm" => 18.0,
+          "cm_amount" => 18.0,
+          "price" => 0.045,
+          "quantity" => 8.0
+        }
+      ],
+      "bidIv" => 68.87,
+      "bids" => [
+        %{
+          "amount" => 8.0,
+          "cm" => 8.0,
+          "cm_amount" => 8.0,
+          "price" => 0.0405,
+          "quantity" => 8.0
+        },
+        %{
+          "amount" => 18.3,
+          "cm" => 26.3,
+          "cm_amount" => 26.3,
+          "price" => 0.04,
+          "quantity" => 18.3
+        },
+        %{
+          "amount" => 1.0,
+          "cm" => 27.3,
+          "cm_amount" => 27.3,
+          "price" => 0.027,
+          "quantity" => 1.0
+        },
+        %{
+          "amount" => 200.0,
+          "cm" => 227.3,
+          "cm_amount" => 227.3,
+          "price" => 0.02,
+          "quantity" => 200.0
+        },
+        %{
+          "amount" => 1.0,
+          "cm" => 228.3,
+          "cm_amount" => 228.3,
+          "price" => 0.0005,
+          "quantity" => 1.0
+        }
+      ],
+      "delta" => -0.11668,
+      "gamma" => 0.0001,
+      "high" => "",
+      "iR" => 0.0,
+      "instrument" => "BTC-27SEP19-2000-P",
+      "last" => 0.0445,
+      "low" => "",
+      "mark" => 0.04175,
+      "markIv" => 69.66,
+      "settlementPrice" => 0.0455,
+      "state" => "open",
+      "theta" => -0.77458,
+      "tstamp" => 1549094359240,
+      "uIx" => "BTC-28JUN19",
+      "uPx" => 3335.32,
+      "vega" => 5.27061
+    },
+    "success" => true,
+    "testnet" => false
+  }
+]

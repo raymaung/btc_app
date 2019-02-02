@@ -1,0 +1,20 @@
+%{
+  "message" => "portfolio_event",
+  "result" => %{
+    "portfolio" => [
+      %{
+        "availableFunds" => 0.0,
+        "currency" => "BTC",
+        "equity" => 0.0,
+        "initialMargin" => 0.0,
+        "maintenanceMargin" => 0.0,
+        "realizedPl" => 0.0,
+        "totalPl" => 0.0,
+        "unrealizedPl" => 0.0
+      }
+    ],
+    "positions" => []
+  },
+  "success" => true,
+  "testnet" => false
+}
