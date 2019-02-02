@@ -1,0 +1,7 @@
+%{
+  "cowlib": {:git, "https://github.com/ninenines/cowlib", "8588724cf91ddbb53b9c35ed665866556b217323", [ref: "master"]},
+  "deribit_api": {:git, "https://github.com/raymaung/deribit-api-erlang.git", "7ef4f04fd0c3f796d6c1a1072b74c8e353af577f", []},
+  "gun": {:git, "https://github.com/ninenines/gun.git", "bc733a2ca5f7d07f997ad6edf184f775b23434aa", [ref: "bc733a2ca5f7d07f997ad6edf184f775b23434aa"]},
+  "jiffy": {:hex, :jiffy, "0.14.11", "919a87d491c5a6b5e3bbc27fafedc3a0761ca0b4c405394f121f582fd4e3f0e5", [:rebar3], [], "hexpm"},
+  "ranch": {:git, "https://github.com/ninenines/ranch", "3190aef88aea04d6dce8545fe9b4574288903f44", [ref: "master"]},
+}
