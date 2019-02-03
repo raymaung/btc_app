@@ -1,6 +1,8 @@
 defmodule Deribit.DeribitApi do
   alias __MODULE__
 
+  alias DataWarehouse.{Repo, DeribitNotification}
+
   defstruct [:connection]
 
   def open do
@@ -39,25 +41,18 @@ defmodule Deribit.DeribitApi do
     IO.puts "subscribed"
   end
 
-  def subscribe_callback({:notifications, response}) do
+  def subscribe_callback({:notifications, notifications}) do
     IO.write "."
-    response |> Enum.each(&notification_response/1)
+    notifications |> Enum.each(&notification_response/1)
   end
 
-  def subscribe_callback({response_type, response}) do
-    IO.puts "Unknown response_type: #{response_type}"
+  def subscribe_callback(unknown) do
+    IO.puts "Unknown callback"
+    IO.inspect unknown
+    IO.puts "===================="
   end
 
   defp notification_response(%{"message" => message} = notification) do
-    known_types = [
-      "order_book_event",
-      "portfolio_event",
-      "trade_event"
-    ]
-
-    if !Enum.any?(known_types, fn t -> t == message end) do
-      IO.inspect notification
-      IO.puts "===================="
-    end
+    DeribitNotification.new(message, notification) |> Repo.insert
   end
 end

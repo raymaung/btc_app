@@ -5,4 +5,5 @@ config :data_warehouse, DataWarehouse.Repo,
   database: "data_warehouse_dev",
   username: "postgres",
   password: "postgres",
-  hostname: "localhost"
+  hostname: "localhost",
+  log: false
